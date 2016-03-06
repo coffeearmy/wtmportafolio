@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wtmportafolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.2/jquery.fullPage.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%#= stylesheet_link_tag    'jquery.fullPage', media: 'all' %>
+  <%#= javascript_include_tag 'jquery.fullPage.min' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.2/jquery.fullPage.min.js"></script>
+  
+  <%= csrf_meta_tags %>
+ 	<script type="text/javascript">
+
+		$(document).ready(function() {
+         $('#fullpage').fullpage();
+          if( $('.fullpage').length ){
+		    $('.fullpage').fullpage({
+            navigation: true,
+            navigationPosition: 'right'
+        	  
+         });
+		 }
+      });</script>
+</head>
+<body>
+	
+	<div class="fullpage">
+	<%= yield %>		
+	</div>
+
+</body>
+</html>

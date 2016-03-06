@@ -1,0 +1,8 @@
+ <% @sections.each do |section| %>   
+<div class="section"  style="background-color:<%= section.color %>;">
+	<div class="intro" style=" padding:30px;">
+	    <h1><%= section.title %> </h1>
+	    <p class="blocktext"> <%= section.info %></p>
+    </div>
+  </div>
+ <% end %>
